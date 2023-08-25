@@ -1,0 +1,4 @@
+<app-infinite-scroll (scrolled)="onScroll()">
+    <app-post-item *ngFor="let post of posts" [post]="post"></app-post-item>
+    <span *ngIf="loadingPosts$ | async">Loading...</span>
+</app-infinite-scroll>
